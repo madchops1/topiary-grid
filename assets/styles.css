@@ -3,6 +3,11 @@ header {
     margin: 10px 0;
 }
 
+.logo span {
+    font-size: 18px;
+
+}
+
 .flex-grid {
   display: flex;
 }
@@ -45,9 +50,118 @@ body {
 }
 
 .col {
-  background: grey;
+  background: #f6f5f6;
   padding: 20px;
-  line-height: 100px;
-  color: #fff;
-  text-align: center;
+}
+
+.user {
+    float: right;
+    position: relative;
+}
+
+.user strong {
+    float: left;
+    display: block;
+    margin-right: 20px;
+}
+
+.user ul{
+    float: left;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.user ul li {
+    float: left;
+    display: block;
+    margin-right: 10px;
+}
+
+.user .bottom {
+    margin-top: 10px;
+}
+
+.user .bottom select, .user .bottom span {
+    margin-top: 10px;
+    margin-right: 10px;
+
+}
+
+.menu-bar {background: rgb(1,74,136);
+background: linear-gradient(0deg, rgba(1,74,136,1) 6%, rgba(2,126,236,1) 100%);
+
+    min-height: 40px;
+    width: 100%;
+    border-radius: 3px;
+    display: block;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.menu-bar ul {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.menu-bar ul li {
+    margin: 0px;
+    padding: 0px;
+    float: left;
+    list-style: none;
+
+
+}
+
+.menu-bar ul li a {
+    color: #fff;
+    padding: 10px 20px 10px 0;
+    display: block;
+}
+
+.col-header {
+    
+}
+
+.col-header h2 {
+    color: #1360a6;
+    font-size: 14px;
+}
+
+.col-header h2 { 
+    float: left;
+}
+
+.col-header i {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    float: left;
+}
+
+.col-header i.openitems { background-image: url(icons/OpenItems.png); }
+.col-header i.exposuredata { background-image: url(icons/ExposureData.png); }
+.col-header i.incidentsclaims { background-image: url(icons/IncidentsClaims.png); }
+.col-header i.keyhazards { background-image: url(icons/KeyHazards.png); }
+.col-header i.locations { background-image: url(icons/Locations.png); }
+.col-header i.osha { background-image: url(icons/Osha.png); }
+.col-header i.policiesprograms { background-image: url(icons/PoliciesProgrms.png); }
+.col-header i.serviceteam { background-image: url(icons/ServiceTeam.png); }
+.col-header i.fleet { background-image: url(icons/Fleet.png); }
+
+.col table {
+    font-size: 12px;
+    border: 1px solid #000;
+}
+
+.col-clear {
+    clear: both;
+    display: block;
+    margin-bottom: 20px;
 }

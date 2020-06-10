@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    <link data-require="jqueryui@*" data-semver="1.10.0" rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.0/css/smoothness/jquery-ui-1.10.0.custom.min.css" />
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script data-require="jqueryui@*" data-semver="1.10.0"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.0/jquery-ui.js"></script>
+    <!-- Custom Scripts -->
+    <script src="assets/app.js"></script>
+
+</head>
+
+<body>
+    <!-- Header/Logo -->
+    <header>
+        <a href="/" class="logo">
+            <img src="assets/logo2.png" class="logo" />
+            <span>Company</span>
+        </a>
+        <div class="user">
+            <div class="top">
+                <strong>Welcome Sal</strong>
+                <ul class="user-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">Change Password</a></li>
+                    <li><a href="/">Log Out</a></li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <span>Select Client</span>
+                <select>
+                    <option>Map-Sharp Demo Site</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <div class="menu-bar">
+        <ul>
+            <li><a href='/'>Location Profiles</a></li>
+            <li><a href='/'>Program/Policy Info</a></li>
+            <li><a href='/'>Incidents &amp; Claims</a></li>
+            <li><a href='/'>Enterprise Risk/BCP</a></li>
+            <li><a href='/'>Other</a></li>
+            <li><a href='/'>Admin</a></li>
+        </ul>
+    </div>
+
+    <div class="flex-grid-21">
+        <div class="main-col">
+
+            <div class="flex-grid-halfs">
+                <div class="col">
+                    <div class="col-header">
+                        <i class="icon openitems"></i>
+                        <h2>Open Items &amp; Tasks</h2>
+                        <div class="filter"></div>
+                    </div>
+                    <div>
+                        <table id="table1" class="display table-type-1">
+                            <thead>
+                                <tr>
+                                    <th>Due Date</th>
+                                    <th>Task Title</th>
+                                    <th>Category</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>4/22/2020</td>
+                                    <td>Gather Property Appraisals</td>
+                                    <td>Renewal</td>
+                                </tr>
+                                <tr>
+                                    <td>4/23/2020</td>
+                                    <td>Follow up on Smith WC</td>
+                                    <td>WC Claim</td>
+                                </tr>
+                                <tr>
+                                    <td>4/24/2020</td>
+                                    <td>Gather Property Appraisals</td>
+                                    <td>Renewal</td>
+                                </tr>
+                                <tr>
+                                    <td>4/25/2020</td>
+                                    <td>Follow up on Smith WC</td>
+                                    <td>WC Claim</td>
+                                </tr>
+                                <tr>
+                                    <td>4/26/2020</td>
+                                    <td>Follow up on Smith WC</td>
+                                    <td>WC Claim</td>
+                                </tr>
+                                <tr>
+                                    <td>4/27/2020</td>
+                                    <td>Follow up on Smith WC</td>
+                                    <td>WC Claim</td>
+                                </tr>
+                                <tr>
+                                    <td>4/28/2020</td>
+                                    <td>Follow up on Smith WC</td>
+                                    <td>WC Claim</td>
+                                </tr>
+                                <tr>
+                                    <td>4/29/2020</td>
+                                    <td>Follow up on Smith WC</td>
+                                    <td>WC Claim</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="col-header">
+                        <i class="icon policiesprograms"></i>
+                        <h2>Policies &amp; Program Info</h2>
+                        <div class="filter">
+                            <div id="date-filter">
+                                <input class="date-range-filter date" type="text" value="1/1/2020"
+                                    id="datepicker-from" /> -
+                                <input class="date-range-filter date" type="text" value="1/1/2021" id="datepicker-to" />
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <table id="table1" class="display table-type-1">
+                            <thead>
+                                <tr>
+                                    <th>Policy Type</th>
+                                    <th>Policy #</th>
+                                    <th>Eff Date</th>
+                                    <th>Carrier</th>
+                                    <th>Limits</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Property</td>
+                                    <td>A313131333</td>
+                                    <td>1/1/2021</td>
+                                    <td>AIG</td>
+                                    <td>$25,000,000 Each</td>
+                                </tr>
+                                <tr>
+                                    <td>Crime</td>
+                                    <td>E33451333</td>
+                                    <td>1/3/2021</td>
+                                    <td>AIG</td>
+                                    <td>$200,000 Each</td>
+                                </tr>
+                                <tr>
+                                    <td>Warranty</td>
+                                    <td>C93831333</td>
+                                    <td>1/5/2021</td>
+                                    <td>Zurich</td>
+                                    <td>$1,000,000 Each</td>
+                                </tr>
+                                <tr>
+                                    <td>General Liability</td>
+                                    <td>D845841333</td>
+                                    <td>9/1/2021</td>
+                                    <td>Zurich</td>
+                                    <td>$1,000,000 Each</td>
+                                </tr>
+                                <tr>
+                                    <td>Business Auto</td>
+                                    <td>D8494881333</td>
+                                    <td>9/1/2021</td>
+                                    <td>Zurich</td>
+                                    <td>$1,000,000 Each</td>
+                                </tr>
+                                <tr>
+                                    <td>Warranty</td>
+                                    <td>E839082983</td>
+                                    <td>9/5/2021</td>
+                                    <td>Zurich</td>
+                                    <td>$2,000,000 Each</td>
+                                </tr>
+                                <tr>
+                                    <td>Warranty</td>
+                                    <td>E839082983</td>
+                                    <td>9/5/2021</td>
+                                    <td>Zurich</td>
+                                    <td>$2,000,000 Each</td>
+                                </tr>
+                                <tr>
+                                    <td>Warranty</td>
+                                    <td>E839082983</td>
+                                    <td>9/5/2021</td>
+                                    <td>Zurich</td>
+                                    <td>$2,000,000 Each</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-grid-halfs">
+                <div class="col">
+                    <div class="col-header">
+                        <i class="icon serviceteam"></i>
+                        <h2>Service Team, Calendar & Stewardship</h2>
+                        <div class="filter">
+                            <div id="date-filter">
+                                <input class="date-range-filter date" type="text" value="6/7/2020" id="datepicker" />
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <table id="table1" class="display table-type-1">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Carrier</th>
+                                    <th>Category</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Joe ABC</td>
+                                    <td>AIG</td>
+                                    <td>312-900-3333</td>
+                                </tr>
+                                <tr>
+                                    <td>John ABC</td>
+                                    <td>Zurich</td>
+                                    <td>312-888-1222</td>
+                                </tr>
+                                <tr>
+                                    <td>Joe ABC</td>
+                                    <td>AIG</td>
+                                    <td>312-900-3333</td>
+                                </tr>
+                                <tr>
+                                    <td>John ABC</td>
+                                    <td>Zurich</td>
+                                    <td>312-888-1222</td>
+                                </tr>
+                                <tr>
+                                    <td>Joe ABC</td>
+                                    <td>AIG</td>
+                                    <td>312-900-3333</td>
+                                </tr>
+                                <tr>
+                                    <td>John ABC</td>
+                                    <td>Zurich</td>
+                                    <td>312-888-1222</td>
+                                </tr>
+                                <tr>
+                                    <td>Joe ABC</td>
+                                    <td>AIG</td>
+                                    <td>312-900-3333</td>
+                                </tr>
+                                <tr>
+                                    <td>John ABC</td>
+                                    <td>Zurich</td>
+                                    <td>312-888-1222</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="col-header">
+                        <i class="icon keyhazards"></i>
+                        <h2>Key Hazards & Risks</h2>
+                        <div class="filter"></div>
+                    </div>
+                    <div class="col-clear">
+                        <img src="assets/heatmap.png" style="width: 100%;" />
+                    </div>
+                </div>
+            </div>
+            <div class="flex-grid-halfs">
+                <div class="col">
+                    <div class="col-header">
+                        <i class="icon incidentsclaims"></i>
+                        <h2>Incidents &amp; Claims</h2>
+                        <div class="filter"></div>
+                    </div>
+                    <div class="col-clear">
+                        <a href="/" class="linkout">Work Comp</a>
+                        <a href="/" class="linkout">Property</a>
+                        <a href="/" class="linkout">GL</a>
+                        <a href="/" class="linkout">D &amp; O</a>
+                        <a href="/" class="linkout">AL</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="col-header">
+                        <i class="icon osha"></i>
+                        <h2>OSHA Compliance</h2>
+                        <div class="filter"></div>
+                    </div>
+
+                    <div class="col-clear">
+                        <a href="/" class="linkout">300 Logs</a>
+                        <a href="/" class="linkout">301 LOGS</a>
+                        <a href="/" class="linkout">Training Schedule</a>
+                    </div>
+
+                    <div class="col-clear">
+                        <table id="table1" class="display table-type-1">
+                            <thead>
+                                <tr>
+                                    <th>Acc Date</th>
+                                    <th>Name</th>
+                                    <th>Location</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1/1/2021</td>
+                                    <td>Mike Smith</td>
+                                    <td>Chicago</td>
+                                </tr>
+                                <tr>
+                                    <td>9/1/2021</td>
+                                    <td>Jane Doe</td>
+                                    <td>Oak Park</td>
+                                </tr>
+                                <tr>
+                                    <td>1/1/2021</td>
+                                    <td>Mike Smith</td>
+                                    <td>Chicago</td>
+                                </tr>
+                                <tr>
+                                    <td>9/1/2021</td>
+                                    <td>Jane Doe</td>
+                                    <td>Oak Park</td>
+                                </tr>
+                                <tr>
+                                    <td>1/1/2021</td>
+                                    <td>Mike Smith</td>
+                                    <td>Chicago</td>
+                                </tr>
+                                <tr>
+                                    <td>9/1/2021</td>
+                                    <td>Jane Doe</td>
+                                    <td>Oak Park</td>
+                                </tr>
+                                <tr>
+                                    <td>1/1/2021</td>
+                                    <td>Mike Smith</td>
+                                    <td>Chicago</td>
+                                </tr>
+                                <tr>
+                                    <td>9/1/2021</td>
+                                    <td>Jane Doe</td>
+                                    <td>Oak Park</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="small-col">
+            <div class="col-header">
+                <i class="icon rss"></i>
+                <h2>RSS Feeds</h2>
+                <div class="filter"></div>
+            </div>
+            <div class="col-clear white">
+                <img src="assets/rss1.png" />
+                <ul class="rss">
+                    <li><a href="/">Flitch: P/C Insurance Outlook Challenging Uncertain</a></li>
+                    <li><a href="/">Flitch: P/C Insurance Outlook Challenging Uncertain</a></li>
+                    <li><a href="/">Flitch: P/C Insurance Outlook Challenging Uncertain</a></li>
+                </ul>
+            </div>
+            <div class="col-clear white">
+                <img src="assets/rss2.png" />
+                <ul class="rss">
+                    <li><a href="/">Flitch: P/C Insurance Outlook Challenging Uncertain</a></li>
+                    <li><a href="/">Flitch: P/C Insurance Outlook Challenging Uncertain</a></li>
+                    <li><a href="/">Flitch: P/C Insurance Outlook Challenging Uncertain</a></li>
+                </ul>
+            </div>
+            <div class="col-clear white">
+                <img src="assets/rss3.png" />
+                <ul class="rss">
+                    <li><a href="/">Flitch: P/C Insurance Outlook Challenging Uncertain</a></li>
+                    <li><a href="/">Flitch: P/C Insurance Outlook Challenging Uncertain</a></li>
+                    <li><a href="/">Flitch: P/C Insurance Outlook Challenging Uncertain</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

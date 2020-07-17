@@ -8,17 +8,18 @@ header {
 }
 
 .flex-grid {
-  display: flex;
+    display: flex;
 }
 
 .flex-grid .col {
-  flex: 1;
+    flex: 1;
 }
 
 .flex-grid-thirds, .flex-grid-21, .flex-grid-halfs {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    clear: both;
 }
 
 .flex-grid-21 .main-col {
@@ -39,23 +40,14 @@ header {
     width: 49.25%;
 }
 
-@media (max-width: 400px) {
-  .flex-grid,
-  .flex-grid-thirds {
-    display: block;
-    .col {
-      width: 100%;
-      margin: 0 0 10px 0;
-    }
-  }
-}
+
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  padding: 20px;
+    padding: 20px;
 }
 
 .flex-grid { 
@@ -63,8 +55,8 @@ body {
 }
 
 .col {
-  background: #f6f5f6;
-  padding: 10px;
+    background: #dadada;
+    padding: 10px;
 }
 
 .user {
@@ -122,9 +114,8 @@ body {
 .menu-bar ul li {
     margin: 0px;
     padding: 0px;
-    float: left;
     list-style: none;
-
+    display: inline-block;
 
 }
 
@@ -140,7 +131,7 @@ body {
 
 .col-header h2 {
     color: #1360a6;
-    font-size: 14px;
+    font-size: 17px;
 }
 
 .col-header h2 { 
@@ -155,7 +146,7 @@ body {
     display: block;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: 54px;
     float: left;
 }
 
@@ -192,6 +183,13 @@ table.dataTable thead th, table.dataTable thead td, table.dataTable tbody th, ta
     right: 0px;
 }
 
+.filter2 {
+
+    position: absolute;
+    top: 45px;
+    left: 70px;
+}
+
 .date-range-filter {
     width: 60px;
     display: inline-block;
@@ -205,14 +203,17 @@ table.dataTable thead th, table.dataTable thead td, table.dataTable tbody th, ta
     background: #e4e4e3;
     font-size: 10px;
     color: #000;
-    border: 1px solid;
-
-
+    border: 1px solid #000;
+    border-bottom: 0px;
 }
 
 .linkout:hover {
     background: #fff;
     text-decoration: none;
+}
+
+.linkout.last {
+    border-bottom: 1px solid #000;
 }
 
 .white{
@@ -235,4 +236,47 @@ ul.rss li {
 
 ul.rss li a {
     color: #000;
+}
+
+/* Table Styles */
+table.dataTable thead .sorting, table.dataTable thead .sorting_asc, table.dataTable thead .sorting_desc, table.dataTable thead .sorting_asc_disabled, table.dataTable thead .sorting_desc_disabled {
+    background: #fff;
+}
+
+/* Mobile Styles */
+@media (max-width: 700px) {
+
+    .flex-grid-thirds, .flex-grid-21, .flex-grid-halfs {
+        display: block;
+    }
+
+    .user {
+        display: none;
+    }
+
+    .flex-grid-thirds .col, .flex-grid-21 .col, .flex-grid-halfs .col {
+        width: 100%;
+    }
+
+    .flex-grid-21 .main-col {
+        width: 100%;
+    }
+
+    .flex-grid-21 .small-col {
+        width: 100%;
+    }
+
+    .col {
+        margin-bottom: 20px;
+    }
+
+    /*.flex-grid,
+    .flex-grid-thirds {
+        display: block;
+        .col {
+        width: 100%;
+        margin: 0 0 10px 0;
+        }
+    }
+    */
 }
